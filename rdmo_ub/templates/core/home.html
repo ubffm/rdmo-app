@@ -1,0 +1,57 @@
+{% extends 'core/base.html' %}
+{% load i18n compress static core_tags %}
+
+{% block head %}
+{% compress css %}
+<link rel="stylesheet" type="text/x-scss" href="{% static 'core/css/header.scss' %}" />
+{% endcompress %}
+{% compress js %}
+<script type="text/javascript" src="{% static 'core/js/header.js' %}" ></script>
+{% endcompress %}
+{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<header>
+    <div class="hidden-xs">
+        <div class="header-image header-image-0 visible">
+            <img src="{% static 'core/img/header/GUF_BNat_Building_1.jpg' %}"></img>
+            <p class="attribution">
+                View into the reading room of the Natural Sciences Library at Goethe University at the Campus Riedberg. Photo Credit: Uwe Dettmar.
+            </p>
+        </div>
+        <div class="header-image header-image-1">
+            <img src="{% static 'core/img/header/GUF_BNat_Building_2.jpg' %}"></img>
+            <p class="attribution">
+                View into the reading room of the Natural Sciences Library at Goethe University at the Campus Riedberg. Photo Credit: Uwe Dettmar.
+            </p>
+        </div>
+    </div>
+    <div class="container header-text">
+
+        <h1>GU@RDMO</h1>
+
+        <div class="row">
+            <div class="col-md-9">
+                <p>{% trans "A tool to support the planning, implementation, and organisation of research data and software management." %}</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container page">
+    <div class="row">
+        <div class="col-md-9">
+            {% render_lang_template "core/home_text" %}
+        </div>
+
+        <div class="col-md-3">
+            <h3>{% trans 'Login' %}</h3>
+
+            {% include 'account/login_form.html' %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

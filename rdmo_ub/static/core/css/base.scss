@@ -1,0 +1,41 @@
+@import 'core/css/variables.scss';
+
+html, body {
+    height: 100%;
+    background-color: $background-color;
+    font-family: Arial;
+}
+
+h1, h2, h3, h4 {
+    color: $headline-color;
+    background-color: $headline-background-color;
+    line-height: 40px;
+}
+
+h5, h6 {
+    color: $headline-color;
+    background-color: $headline-background-color;
+    font-size: bold;
+    line-height: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 24px;
+}
+.sidebar h2,
+.modal h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 16px;
+}
+h4 {
+    font-size: 14px;
+}
